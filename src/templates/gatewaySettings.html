@@ -1,0 +1,28 @@
+{% from "_includes/forms" import textField, lightswitchField %}
+
+{{ textField({
+    label: 'Merchant ID'|t('commerce'),
+    id: 'merchantId',
+    class: 'ltr',
+    name: 'merchantId',
+    value: gateway.merchantId,
+    errors: gateway.getErrors('merchantId')
+}) }}
+
+{{ textField({
+    label: 'Service key'|t('commerce'),
+    id: 'serviceKey',
+    class: 'ltr',
+    name: 'serviceKey',
+    value: gateway.serviceKey,
+    errors: gateway.getErrors('serviceKey')
+}) }}
+
+{{ textField({
+    label: 'Client key'|t('commerce'),
+    id: 'clientKey',
+    class: 'ltr',
+    name: 'clientKey',
+    value: gateway.clientKey,
+    errors: gateway.getErrors('clientKey')
+}) }}
