@@ -8,9 +8,7 @@
 namespace craft\commerce\worldpay\migrations;
 
 use Craft;
-use craft\commerce\multisafepay\gateways\Gateway;
-use craft\commerce\paypal\gateways\SagePayDirect;
-use craft\commerce\paypal\gateways\SagePayServer;
+use craft\commerce\worldpay\gateways\Gateway;
 use craft\db\Migration;
 use craft\db\Query;
 
