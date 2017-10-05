@@ -5,7 +5,7 @@ namespace craft\commerce\worldpay\models;
 use craft\commerce\models\payments\CreditCardPaymentForm;
 
 /**
- * Stripe Payment form model.
+ * WorldPay Payment form model.
  *
  * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
  * @since     1.0
