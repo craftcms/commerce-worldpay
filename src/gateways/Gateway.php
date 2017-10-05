@@ -12,7 +12,7 @@ use Omnipay\Omnipay;
 use Omnipay\WorldPay\JsonGateway as OmnipayGateway;
 
 /**
- * PayPalPro represents PayPalPro gateway
+ * Gateway represents WorldPay gateway
  *
  * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
  * @since     1.0
