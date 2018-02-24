@@ -27,7 +27,7 @@ class WorldpayPaymentForm extends CreditCardPaymentForm
     /**
      * @inheritdoc
      */
-    public function rules()
+    public function rules(): array
     {
         if (empty($this->token)) {
             return parent::rules();
