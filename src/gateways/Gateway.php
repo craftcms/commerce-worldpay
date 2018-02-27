@@ -3,6 +3,7 @@
 namespace craft\commerce\worldpay\gateways;
 
 use Craft;
+use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\CreditCardGateway;
 use craft\commerce\worldpay\models\WorldpayPaymentForm;
 use craft\commerce\worldpay\WorldpayPaymentBundle;
@@ -77,7 +78,7 @@ class Gateway extends CreditCardGateway
     /**
      * @inheritdoc
      */
-    public function getPaymentFormModel()
+    public function getPaymentFormModel(): BasePaymentForm
     {
         return new WorldpayPaymentForm();
     }
