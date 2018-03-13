@@ -1,4 +1,4 @@
-Worldpay payment gateway for Craft Commerce
+Worldpay payment gateway plugin for Craft Commerce 2
 =======================
 
 This plugin provides [Worldpay](https://www.worldpay.com/) integration for [Craft Commerce](https://craftcommerce.com/).
@@ -7,7 +7,7 @@ It provides the Worldpay Json gateway.
 
 ## Requirements
 
-This plugin requires Craft Commerce 2.0.1-alpha.4 or later.
+This plugin requires Craft Commerce 2.0.0-alpha.5 or later.
 
 ## Installation
 

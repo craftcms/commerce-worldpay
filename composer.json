@@ -1,6 +1,6 @@
 {
   "name": "craftcms/commerce-worldpay",
-  "description": "Worldpay integration for Craft Commerce",
+  "description": "Worldpay payment gateway plugin for Craft Commerce 2",
   "version": "1.0.0",
   "type": "craft-plugin",
   "keywords": [
@@ -25,7 +25,7 @@
     "rss": "https://github.com/craftcms/commerce-worldpay/commits/master.atom"
   },
   "require": {
-    "craftcms/commerce-worldpay": "*",
+    "craftcms/commerce": "^2.0.0-alpha.5",
     "omnipay/worldpay": "^2.2.2"
   },
   "autoload": {
@@ -33,12 +33,6 @@
       "craft\\commerce\\worldpay\\": "src/"
     }
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
   "extra": {
     "name": "Worldpay",
     "handle": "commerce-worldpay",
