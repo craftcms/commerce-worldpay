@@ -35,7 +35,7 @@
     }
   },
   "extra": {
-    "name": "Worldpay",
+    "name": "Worldpay for Craft Commerce",
     "handle": "commerce-worldpay",
     "changelogUrl": "https://raw.githubusercontent.com/craftcms/commerce-worldpay/master/CHANGELOG.md",
     "downloadUrl": "https://github.com/craftcms/commerce-worldpay/archive/master.zip"
