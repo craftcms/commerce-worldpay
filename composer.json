@@ -1,6 +1,6 @@
 {
   "name": "craftcms/commerce-worldpay",
-  "description": "Worldpay payment gateway plugin for Craft Commerce 2",
+  "description": "Worldpay integration for Craft Commerce 2",
   "version": "1.0.0",
   "type": "craft-plugin",
   "keywords": [
@@ -37,8 +37,6 @@
   },
   "extra": {
     "name": "Worldpay for Craft Commerce",
-    "handle": "commerce-worldpay",
-    "changelogUrl": "https://raw.githubusercontent.com/craftcms/commerce-worldpay/master/CHANGELOG.md",
-    "downloadUrl": "https://github.com/craftcms/commerce-worldpay/archive/master.zip"
+    "handle": "commerce-worldpay"
   }
 }
