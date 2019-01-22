@@ -2,8 +2,6 @@
 
 <h1 align="center">Worldpay for Craft Commerce</h1>
 
-# Worldpay for Craft Commerce
-
 This plugin provides a [Worldpay](https://www.worldpay.com/) integration for [Craft Commerce](https://craftcms.com/commerce).
 
 It provides the Worldpay Json gateway.
