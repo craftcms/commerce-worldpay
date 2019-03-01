@@ -1,5 +1,14 @@
 # Release Notes for Worldpay for Craft Commerce
 
+## Unreleased
+
+### Added
+- Gateway settings can now be set to environment variables.
+
+### Changed
+- Worldpay for Craft Commerce now requires Craft 3.1.5 or later.
+- Worldpay for Craft Commerce now uses Omnipay v3.
+
 ## 1.1.0 - 2019-01-22
 
 ### Changed
