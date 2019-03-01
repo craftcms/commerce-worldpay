@@ -1,5 +1,5 @@
 function initWorldpay() {
-    // Because this might get executed before Stripe is loaded.
+    // Because this might get executed before Worldpay is loaded.
     if (typeof Worldpay === "undefined") {
         setTimeout(initWorldpay, 200);
     } else {
