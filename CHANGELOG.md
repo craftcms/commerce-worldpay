@@ -3,7 +3,7 @@
 ## Unreleased
 
 ### Added
-- Gateway settings can now be set to environment variables.
+- The Merchant ID, Service key, and Client key settings can now be set to environment variables.
 
 ### Changed
 - Worldpay for Craft Commerce now requires Craft 3.1.5 or later.
