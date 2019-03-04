@@ -1,6 +1,6 @@
 # Release Notes for Worldpay for Craft Commerce
 
-## Unreleased
+## 2.0.0 - 2019-03-04
 
 ### Added
 - The Merchant ID, Service key, and Client key settings can now be set to environment variables.
