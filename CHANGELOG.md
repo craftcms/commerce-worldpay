@@ -1,6 +1,6 @@
 # Release Notes for Worldpay for Craft Commerce
 
-## Unreleased
+## 2.1.0.2 - 2020-04-27
 
 ### Fixed
 - Fixed a bug where an environment variable for “Client ID” wasn’t being parsed. ([#2](https://github.com/craftcms/commerce-worldpay/issues/2))
