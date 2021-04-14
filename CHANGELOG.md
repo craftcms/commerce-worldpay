@@ -4,7 +4,6 @@
 
 ### Changed
 - Worldpay for Craft Commerce now requires Craft Commerce 3.3 or later.
-- Worldpay for Craft Commerce now uses Guzzle 7.
 
 ## 2.1.0.2 - 2020-04-27
 
