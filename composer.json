@@ -1,6 +1,6 @@
 {
   "name": "craftcms/commerce-worldpay",
-  "description": "Worldpay integration for Craft Commerce 2",
+  "description": "Worldpay integration for Craft Commerce 3.3+",
   "version": "3.0.0",
   "type": "craft-plugin",
   "keywords": [
