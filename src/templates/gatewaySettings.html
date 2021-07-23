@@ -1,31 +1,31 @@
 {% from "_includes/forms" import textField, lightswitchField, autosuggestField %}
 
 {{ autosuggestField({
-    label: 'Merchant ID'|t('commerce'),
-    id: 'merchantId',
-    class: 'ltr',
-    name: 'merchantId',
-    suggestEnvVars: true,
-    value: gateway.merchantId,
-    errors: gateway.getErrors('merchantId')
+  label: 'Merchant ID'|t('commerce'),
+  id: 'merchantId',
+  class: 'ltr',
+  name: 'merchantId',
+  suggestEnvVars: true,
+  value: gateway.merchantId,
+  errors: gateway.getErrors('merchantId')
 }) }}
 
 {{ autosuggestField({
-    label: 'Service key'|t('commerce'),
-    id: 'serviceKey',
-    class: 'ltr',
-    name: 'serviceKey',
-    suggestEnvVars: true,
-    value: gateway.serviceKey,
-    errors: gateway.getErrors('serviceKey')
+  label: 'Service key'|t('commerce'),
+  id: 'serviceKey',
+  class: 'ltr',
+  name: 'serviceKey',
+  suggestEnvVars: true,
+  value: gateway.serviceKey,
+  errors: gateway.getErrors('serviceKey')
 }) }}
 
 {{ autosuggestField({
-    label: 'Client key'|t('commerce'),
-    id: 'clientKey',
-    class: 'ltr',
-    name: 'clientKey',
-    suggestEnvVars: true,
-    value: gateway.clientKey,
-    errors: gateway.getErrors('clientKey')
+  label: 'Client key'|t('commerce'),
+  id: 'clientKey',
+  class: 'ltr',
+  name: 'clientKey',
+  suggestEnvVars: true,
+  value: gateway.clientKey,
+  errors: gateway.getErrors('clientKey')
 }) }}

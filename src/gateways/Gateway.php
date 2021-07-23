@@ -20,9 +20,6 @@ use Omnipay\WorldPay\JsonGateway as OmnipayGateway;
  */
 class Gateway extends CreditCardGateway
 {
-    // Properties
-    // =========================================================================
-
     /**
      * @var string
      */
@@ -37,9 +34,6 @@ class Gateway extends CreditCardGateway
      * @var string
      */
     public $clientKey;
-
-    // Public Methods
-    // =========================================================================
 
     /**
      * @inheritdoc
@@ -90,9 +84,6 @@ class Gateway extends CreditCardGateway
     {
         return Craft::$app->getView()->renderTemplate('commerce-worldpay/gatewaySettings', ['gateway' => $this]);
     }
-
-    // Protected Methods
-    // =========================================================================
 
     /**
      * @inheritdoc
