@@ -1,10 +1,12 @@
 <p align="center"><img src="./src/icon.svg" width="100" height="100" alt="Worldpay for Craft Commerce icon"></p>
 
-<h1 align="center">Worldpay for Craft Commerce</h1>
+<h1 align="center">Worldpay Online Payments for Craft Commerce</h1>
 
 This plugin provides a [Worldpay](https://www.worldpay.com/) integration for [Craft Commerce](https://craftcms.com/commerce).
 
-It provides the Worldpay Json gateway.
+This integration uses Worldpay's [Online Payments](https://developer.worldpay.com/docs/wpop) API utilizing the features of the [Omnipay Worldpay library](https://github.com/thephpleague/omnipay-worldpay).
+
+> **Note:** 3D secure is not currently implemented due to the underlying Omnipay library [not supporting the feature](https://github.com/thephpleague/omnipay-worldpay/issues/41).
 
 ## Requirements
 
