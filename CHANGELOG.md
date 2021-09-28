@@ -1,4 +1,9 @@
-# Release Notes for Worldpay for Craft Commerce
+# Release Notes for Worldpay Online Payments for Craft Commerce
+
+## 3.1.0 - 2021-09-28
+
+### Changed
+- The payment form JavaScript no longer depends on jQuery.
 
 ## 3.0.0 - 2021-04-20
 
