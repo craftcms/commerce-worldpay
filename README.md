@@ -10,7 +10,7 @@ This integration uses Worldpay's [Online Payments](https://developer.worldpay.co
 
 ## Requirements
 
-This plugin requires Craft 3.6 and Craft Commerce 3.3 or later.
+This plugin requires Craft 4.0 and Craft Commerce 4.0 or later.
 
 ## Installation
 
