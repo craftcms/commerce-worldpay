@@ -1,5 +1,10 @@
 # Release Notes for Worldpay Online Payments for Craft Commerce
 
+## 3.1.1 - 2021-10-14
+
+### Fixed
+- Fixed a bug where the payment form wouldn’t submit.
+
 ## 3.1.0 - 2021-09-28
 
 ### Changed

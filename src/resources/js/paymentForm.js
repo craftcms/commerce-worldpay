@@ -18,7 +18,7 @@ function initWorldpay() {
     });
 
     $form.addEventListener('submit', function (ev) {
-      if (ev.currentTarget.querySelector('input[name=worldpayToken]'))
+      if (!ev.currentTarget.querySelector('input[name=worldpayToken]'))
       {
         ev.preventDefault();
         Worldpay.submitTemplateForm();
