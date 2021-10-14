@@ -3,6 +3,7 @@
 namespace craft\commerce\worldpay\gateways;
 
 use Craft;
+use craft\commerce\controllers\PaymentsController;
 use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\CreditCardGateway;
 use craft\commerce\worldpay\models\WorldpayPaymentForm;
@@ -17,23 +18,25 @@ use Omnipay\WorldPay\JsonGateway as OmnipayGateway;
  *
  * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
  * @since     1.0
+ *
+ * @property-read null|string $settingsHtml
  */
 class Gateway extends CreditCardGateway
 {
     /**
-     * @var string
+     * @var string|null
      */
-    public $merchantId;
+    public ?string $merchantId = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public $serviceKey;
+    public ?string $serviceKey = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public $clientKey;
+    public ?string $clientKey = null;
 
     /**
      * @inheritdoc
@@ -46,11 +49,12 @@ class Gateway extends CreditCardGateway
     /**
      * @inheritdoc
      */
-    public function getPaymentFormHtml(array $params)
+    public function getPaymentFormHtml(array $params): ?string
     {
         $defaults = [
             'gateway' => $this,
-            'paymentForm' => $this->getPaymentFormModel()
+            'paymentForm' => $this->getPaymentFormModel(),
+            'paymentFormNamespace' => sprintf('%s[%s]', PaymentsController::PAYMENT_FORM_NAMESPACE, $this->handle),
         ];
 
         $params = array_merge($defaults, $params);
@@ -80,7 +84,7 @@ class Gateway extends CreditCardGateway
     /**
      * @inheritdoc
      */
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate('commerce-worldpay/gatewaySettings', ['gateway' => $this]);
     }
@@ -103,7 +107,7 @@ class Gateway extends CreditCardGateway
     /**
      * @inheritdoc
      */
-    protected function getGatewayClassName()
+    protected function getGatewayClassName(): ?string
     {
         return '\\'.OmnipayGateway::class;
     }
