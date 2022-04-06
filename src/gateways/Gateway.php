@@ -54,7 +54,7 @@ class Gateway extends CreditCardGateway
         $defaults = [
             'gateway' => $this,
             'paymentForm' => $this->getPaymentFormModel(),
-            'paymentFormNamespace' => sprintf('%s[%s]', PaymentsController::PAYMENT_FORM_NAMESPACE, $this->handle),
+            'handle' => $this->handle,
         ];
 
         $params = array_merge($defaults, $params);
