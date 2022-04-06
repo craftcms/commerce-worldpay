@@ -7,7 +7,7 @@
 
 namespace craft\commerce\worldpay;
 
-use yii\web\AssetBundle;
+use craft\web\AssetBundle;
 
 /**
  * Asset bundle for the Dashboard

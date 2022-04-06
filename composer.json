@@ -30,13 +30,30 @@
     "craftcms/commerce-omnipay": "^4.0",
     "omnipay/worldpay": "^3.0.0"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
     "psr-4": {
       "craft\\commerce\\worldpay\\": "src/"
     }
   },
+  "scripts": {
+    "phpstan": "phpstan --memory-limit=1G",
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix"
+  },
   "extra": {
     "name": "Worldpay Online Payments for Craft Commerce",
     "handle": "commerce-worldpay"
+  },
+  "require-dev": {
+    "craftcms/phpstan": "dev-main",
+    "craftcms/ecs": "dev-main"
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
   }
 }
