@@ -1,3 +1,7 @@
-<div class="worldpay-form" data-clientkey="{{ gateway.clientKey ? parseEnv(gateway.clientKey) : '' }}">
+<div
+  class="worldpay-form"
+  data-payment-form-namespace="{{ handle|commercePaymentFormNamespace }}"
+  data-clientkey="{{ gateway.clientKey ? parseEnv(gateway.clientKey) : '' }}"
+  >
   <div id="payment-section"></div>
 </div>

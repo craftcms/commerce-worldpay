@@ -17,7 +17,7 @@ class WorldpayPaymentBundle extends AssetBundle
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         $this->sourcePath = '@craft/commerce/worldpay/resources';
 
