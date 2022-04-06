@@ -3,7 +3,6 @@
 namespace craft\commerce\worldpay\gateways;
 
 use Craft;
-use craft\commerce\controllers\PaymentsController;
 use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\CreditCardGateway;
 use craft\commerce\worldpay\models\WorldpayPaymentForm;
