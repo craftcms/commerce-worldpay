@@ -9,7 +9,6 @@ use craft\commerce\worldpay\models\WorldpayPaymentForm;
 use craft\commerce\worldpay\WorldpayPaymentBundle;
 use craft\web\View;
 use Omnipay\Common\AbstractGateway;
-use Omnipay\Omnipay;
 use Omnipay\WorldPay\JsonGateway as OmnipayGateway;
 
 /**
@@ -50,7 +49,7 @@ class Gateway extends CreditCardGateway
     {
         $defaults = [
             'gateway' => $this,
-            'paymentForm' => $this->getPaymentFormModel()
+            'paymentForm' => $this->getPaymentFormModel(),
         ];
 
         $params = array_merge($defaults, $params);
@@ -105,6 +104,6 @@ class Gateway extends CreditCardGateway
      */
     protected function getGatewayClassName()
     {
-        return '\\'.OmnipayGateway::class;
+        return '\\' . OmnipayGateway::class;
     }
 }

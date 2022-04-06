@@ -2,11 +2,10 @@
 
 namespace craft\commerce\worldpay;
 
-use craft\commerce\worldpay\gateways\Gateway;
 use craft\commerce\services\Gateways;
+use craft\commerce\worldpay\gateways\Gateway;
 use craft\events\RegisterComponentTypesEvent;
 use yii\base\Event;
-
 
 /**
  * Plugin represents the WorldPay integration plugin.

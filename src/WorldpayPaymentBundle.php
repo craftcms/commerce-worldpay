@@ -8,7 +8,6 @@
 namespace craft\commerce\worldpay;
 
 use craft\web\AssetBundle;
-use craft\web\assets\cp\CpAsset;
 
 /**
  * Asset bundle for the Dashboard
