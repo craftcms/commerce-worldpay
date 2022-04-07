@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb4da7703577827d8e31d0408befce74",
+    "content-hash": "328c0b8f8ac09eb85f19f1b92012ff41",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -742,16 +742,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.0.0-beta.3",
+            "version": "4.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "e8bf3d348fac4cf1a2999ff09b1317ff4f1cd5f7"
+                "reference": "867af8684b1cc90c9b0bb0a6fb8e4f2a369b45de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/e8bf3d348fac4cf1a2999ff09b1317ff4f1cd5f7",
-                "reference": "e8bf3d348fac4cf1a2999ff09b1317ff4f1cd5f7",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/867af8684b1cc90c9b0bb0a6fb8e4f2a369b45de",
+                "reference": "867af8684b1cc90c9b0bb0a6fb8e4f2a369b45de",
                 "shasum": ""
             },
             "require": {
@@ -820,6 +820,7 @@
                 "vlucas/phpdotenv": "^5.4.1"
             },
             "suggest": {
+                "ext-exif": "Adds support for parsing image EXIF data.",
                 "ext-iconv": "Adds support for more character encodings than PHP’s built-in mb_convert_encoding() function, which Craft will take advantage of when converting strings to UTF-8.",
                 "ext-imagick": "Adds support for more image processing formats and options."
             },
@@ -827,7 +828,6 @@
             "autoload": {
                 "psr-4": {
                     "craft\\": "src/",
-                    "crafttests\\fixtures\\": "tests/fixtures/",
                     "yii2tech\\ar\\softdelete\\": "lib/ar-softdelete/src/"
                 }
             },
@@ -856,24 +856,24 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-22T16:31:09+00:00"
+            "time": "2022-04-06T18:49:33+00:00"
         },
         {
             "name": "craftcms/commerce",
-            "version": "4.0.x-dev",
+            "version": "4.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce.git",
-                "reference": "46aa615586afc2e1f1c3395b197bf2dc475c4c5b"
+                "reference": "5f3fda8d269b228c533d8bd145e5769f87854349"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce/zipball/46aa615586afc2e1f1c3395b197bf2dc475c4c5b",
-                "reference": "46aa615586afc2e1f1c3395b197bf2dc475c4c5b",
+                "url": "https://api.github.com/repos/craftcms/commerce/zipball/5f3fda8d269b228c533d8bd145e5769f87854349",
+                "reference": "5f3fda8d269b228c533d8bd145e5769f87854349",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.0.0-beta.2",
+                "craftcms/cms": "^4.0.0-beta.4",
                 "dompdf/dompdf": "^1.0.2",
                 "ibericode/vat": "^1.1.2",
                 "iio/libmergepdf": "^4.0",
@@ -926,24 +926,24 @@
                 "rss": "https://github.com/craftcms/commerce/releases.atom",
                 "source": "https://github.com/craftcms/commerce"
             },
-            "time": "2022-04-06T13:42:21+00:00"
+            "time": "2022-04-06T19:14:41+00:00"
         },
         {
             "name": "craftcms/commerce-omnipay",
-            "version": "dev-commerce4",
+            "version": "4.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/commerce-omnipay.git",
-                "reference": "fb2218bad90cb8938435fa139792819bc698f4ad"
+                "reference": "362b6b13fc0d1cef783ec529793270e97ebc235b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/commerce-omnipay/zipball/fb2218bad90cb8938435fa139792819bc698f4ad",
-                "reference": "fb2218bad90cb8938435fa139792819bc698f4ad",
+                "url": "https://api.github.com/repos/craftcms/commerce-omnipay/zipball/362b6b13fc0d1cef783ec529793270e97ebc235b",
+                "reference": "362b6b13fc0d1cef783ec529793270e97ebc235b",
                 "shasum": ""
             },
             "require": {
-                "craftcms/commerce": "^4.0.x-dev",
+                "craftcms/commerce": "^4.0.0-beta.2",
                 "omnipay/common": "^3.0",
                 "php-http/guzzle7-adapter": "^1.0"
             },
@@ -987,7 +987,7 @@
                 "rss": "https://github.com/craftcms/commerce-omnipay/commits/master.atom",
                 "source": "https://github.com/craftcms/commerce-omnipay"
             },
-            "time": "2022-04-06T10:00:24+00:00"
+            "time": "2022-04-07T13:36:44+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -7944,8 +7944,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "craftcms/commerce": 20,
-        "craftcms/commerce-omnipay": 20,
         "craftcms/phpstan": 20,
         "craftcms/ecs": 20
     },
