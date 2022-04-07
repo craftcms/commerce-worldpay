@@ -1,5 +1,13 @@
 # Release Notes for Worldpay Online Payments for Craft Commerce
 
+## Unreleased
+
+### Added
+- Added Craft CMS 4 and Craft Commerce 4 compatibility.
+
+### Changed
+- Worldpay Json gateway settings now support environment variables.
+
 ## 3.1.1 - 2021-10-14
 
 ### Fixed
