@@ -7,6 +7,7 @@ use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\CreditCardGateway;
 use craft\commerce\worldpay\models\WorldpayPaymentForm;
 use craft\commerce\worldpay\WorldpayPaymentBundle;
+use craft\helpers\App;
 use craft\web\View;
 use Omnipay\Common\AbstractGateway;
 use Omnipay\WorldPay\JsonGateway as OmnipayGateway;
@@ -24,17 +25,17 @@ class Gateway extends CreditCardGateway
     /**
      * @var string|null
      */
-    public ?string $merchantId = null;
+    private ?string $_merchantId = null;
 
     /**
      * @var string|null
      */
-    public ?string $serviceKey = null;
+    private ?string $_serviceKey = null;
 
     /**
      * @var string|null
      */
-    public ?string $clientKey = null;
+    private ?string $_clientKey = null;
 
     /**
      * @inheritdoc
@@ -42,6 +43,79 @@ class Gateway extends CreditCardGateway
     public static function displayName(): string
     {
         return Craft::t('commerce', 'Worldpay Json');
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getSettings(): array
+    {
+        $settings = parent::getSettings();
+        $settings['merchantId'] = $this->getMerchantId(false);
+        $settings['serviceKey'] = $this->getServiceKey(false);
+        $settings['clientKey'] = $this->getClientKey(false);
+
+        return $settings;
+    }
+
+    /**
+     * @param bool $parse
+     * @return string|null
+     * @since 4.0.0
+     */
+    public function getMerchantId(bool $parse = true): ?string
+    {
+        return $parse ? App::parseEnv($this->_merchantId) : $this->_merchantId;
+    }
+
+    /**
+     * @param string|null $merchantId
+     * @return void
+     * @since 4.0.0
+     */
+    public function setMerchantId(?string $merchantId): void
+    {
+        $this->_merchantId = $merchantId;
+    }
+
+    /**
+     * @param bool $parse
+     * @return string|null
+     * @since 4.0.0
+     */
+    public function getServiceKey(bool $parse = true): ?string
+    {
+        return $parse ? App::parseEnv($this->_serviceKey) : $this->_serviceKey;
+    }
+
+    /**
+     * @param string|null $serviceKey
+     * @return void
+     * @since 4.0.0
+     */
+    public function setServiceKey(?string $serviceKey): void
+    {
+        $this->_serviceKey = $serviceKey;
+    }
+
+    /**
+     * @param bool $parse
+     * @return string|null
+     * @since 4.0.0
+     */
+    public function getClientKey(bool $parse = true): ?string
+    {
+        return $parse ? App::parseEnv($this->_clientKey) : $this->_clientKey;
+    }
+
+    /**
+     * @param string|null $clientKey
+     * @return void
+     * @since 4.0.0
+     */
+    public function setClientKey(?string $clientKey): void
+    {
+        $this->_clientKey = $clientKey;
     }
 
     /**
@@ -95,9 +169,9 @@ class Gateway extends CreditCardGateway
         /** @var OmnipayGateway $gateway */
         $gateway = static::createOmnipayGateway($this->getGatewayClassName());
 
-        $gateway->setMerchantId(Craft::parseEnv($this->merchantId));
-        $gateway->setServiceKey(Craft::parseEnv($this->serviceKey));
-        $gateway->setClientKey(Craft::parseEnv($this->clientKey));
+        $gateway->setMerchantId($this->getMerchantId());
+        $gateway->setServiceKey($this->getServiceKey());
+        $gateway->setClientKey($this->getClientKey());
 
         return $gateway;
     }

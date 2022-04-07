@@ -12,6 +12,7 @@ function initWorldpay() {
     setTimeout(initWorldpay, 200);
   } else {
     var $wrapper = document.querySelector('.worldpay-form');
+    var $renderDiv = $wrapper.firstElementChild;
     var key = $wrapper.dataset.clientkey;
     var paymentFormNamespace = $wrapper.dataset.paymentFormNamespace;
     var tokenInputName = paymentFormNamespace + '[worldpayToken]';
@@ -31,7 +32,7 @@ function initWorldpay() {
     Worldpay.useTemplateForm({
       clientKey: key,
       form:'paymentForm',
-      paymentSection:'payment-section',
+      paymentSection:$renderDiv.id,
       display:'inline',
       reusable:true,
       saveButton: false,
