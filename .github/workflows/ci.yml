@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - develop
+      - '4.0'
   pull_request:
     branches:
       - develop
+      - '4.0'
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
