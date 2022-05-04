@@ -1,4 +1,4 @@
-{% from "_includes/forms" import textField, lightswitchField, autosuggestField %}
+{% from "_includes/forms" import autosuggestField %}
 
 {{ autosuggestField({
   label: 'Merchant ID'|t('commerce'),
@@ -6,7 +6,7 @@
   class: 'ltr',
   name: 'merchantId',
   suggestEnvVars: true,
-  value: gateway.merchantId,
+  value: gateway.getMerchantId(false),
   errors: gateway.getErrors('merchantId')
 }) }}
 
@@ -16,7 +16,7 @@
   class: 'ltr',
   name: 'serviceKey',
   suggestEnvVars: true,
-  value: gateway.serviceKey,
+  value: gateway.getServiceKey(false),
   errors: gateway.getErrors('serviceKey')
 }) }}
 
@@ -26,6 +26,6 @@
   class: 'ltr',
   name: 'clientKey',
   suggestEnvVars: true,
-  value: gateway.clientKey,
+  value: gateway.getClientKey(false),
   errors: gateway.getErrors('clientKey')
 }) }}

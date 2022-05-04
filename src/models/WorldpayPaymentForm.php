@@ -15,7 +15,7 @@ class WorldpayPaymentForm extends CreditCardPaymentForm
     /**
      * @inheritdoc
      */
-    public function setAttributes($values, $safeOnly = true)
+    public function setAttributes($values, $safeOnly = true): void
     {
         parent::setAttributes($values, $safeOnly);
 

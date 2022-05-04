@@ -8,7 +8,6 @@
 namespace craft\commerce\worldpay;
 
 use craft\web\AssetBundle;
-use craft\web\assets\cp\CpAsset;
 
 /**
  * Asset bundle for the Dashboard
@@ -18,7 +17,7 @@ class WorldpayPaymentBundle extends AssetBundle
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         $this->sourcePath = '@craft/commerce/worldpay/resources';
 

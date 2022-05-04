@@ -12,13 +12,16 @@ function initWorldpay() {
     setTimeout(initWorldpay, 200);
   } else {
     var $wrapper = document.querySelector('.worldpay-form');
+    var $renderDiv = $wrapper.firstElementChild;
     var key = $wrapper.dataset.clientkey;
+    var paymentFormNamespace = $wrapper.dataset.paymentFormNamespace;
+    var tokenInputName = paymentFormNamespace + '[worldpayToken]';
     var $form = findClosestParent($wrapper, function(element) {
       return element.tagName === 'FORM';
     });
 
     $form.addEventListener('submit', function (ev) {
-      if (!ev.currentTarget.querySelector('input[name=worldpayToken]'))
+      if (!ev.currentTarget.querySelector('input[name="' + tokenInputName + '"]'))
       {
         ev.preventDefault();
         Worldpay.submitTemplateForm();
@@ -29,7 +32,7 @@ function initWorldpay() {
     Worldpay.useTemplateForm({
       clientKey: key,
       form:'paymentForm',
-      paymentSection:'payment-section',
+      paymentSection:$renderDiv.id,
       display:'inline',
       reusable:true,
       saveButton: false,
@@ -38,7 +41,7 @@ function initWorldpay() {
           var _el = document.createElement('input');
           _el.value = obj.token;
           _el.type = 'hidden';
-          _el.name = 'worldpayToken';
+          _el.name = tokenInputName;
           $form.appendChild(_el);
           $form.submit();
         }
