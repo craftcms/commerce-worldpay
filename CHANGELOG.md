@@ -1,17 +1,10 @@
 # Release Notes for Worldpay Online Payments for Craft Commerce
 
-## 4.0.0-RC1
-
-### Changed
-- Worldpay for Craft Commerce now requires Craft Commerce 4.0.0-RC1 or later.
-
-## 4.0.0-beta.1 - 2022-04-07
+## 4.0.0 - 2022-05-04
 
 ### Added
 - Added Craft CMS 4 and Craft Commerce 4 compatibility.
-
-### Changed
-- Worldpay Json gateway settings now support environment variables.
+- All gateway settings now support environment variables.
 
 ## 3.1.1 - 2021-10-14
 
