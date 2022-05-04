@@ -1,5 +1,10 @@
 # Release Notes for Worldpay Online Payments for Craft Commerce
 
+## 4.0.0-RC1
+
+### Changed
+- Worldpay for Craft Commerce now requires Craft Commerce 4.0.0-RC1 or later.
+
 ## 4.0.0-beta.1 - 2022-04-07
 
 ### Added
