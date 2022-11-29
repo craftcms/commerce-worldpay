@@ -8,7 +8,7 @@ function findClosestParent(startElement, fn) {
 
 function initWorldpay() {
   // Because this might get executed before Worldpay is loaded.
-  if (typeof Worldpay === "undefined") {
+  if (typeof Worldpay === 'undefined') {
     setTimeout(initWorldpay, 200);
   } else {
     var $wrapper = document.querySelector('.worldpay-form');
@@ -16,13 +16,14 @@ function initWorldpay() {
     var key = $wrapper.dataset.clientkey;
     var paymentFormNamespace = $wrapper.dataset.paymentFormNamespace;
     var tokenInputName = paymentFormNamespace + '[worldpayToken]';
-    var $form = findClosestParent($wrapper, function(element) {
+    var $form = findClosestParent($wrapper, function (element) {
       return element.tagName === 'FORM';
     });
 
     $form.addEventListener('submit', function (ev) {
-      if (!ev.currentTarget.querySelector('input[name="' + tokenInputName + '"]'))
-      {
+      if (
+        !ev.currentTarget.querySelector('input[name="' + tokenInputName + '"]')
+      ) {
         ev.preventDefault();
         Worldpay.submitTemplateForm();
         return false;
@@ -31,12 +32,12 @@ function initWorldpay() {
 
     Worldpay.useTemplateForm({
       clientKey: key,
-      form:'paymentForm',
-      paymentSection:$renderDiv.id,
-      display:'inline',
-      reusable:true,
+      form: 'paymentForm',
+      paymentSection: $renderDiv.id,
+      display: 'inline',
+      reusable: true,
       saveButton: false,
-      callback: function(obj) {
+      callback: function (obj) {
         if (obj && obj.token) {
           var _el = document.createElement('input');
           _el.value = obj.token;
@@ -45,7 +46,7 @@ function initWorldpay() {
           $form.appendChild(_el);
           $form.submit();
         }
-      }
+      },
     });
 
     var $modal = document.querySelector('.modal');
