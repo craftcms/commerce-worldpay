@@ -1,5 +1,8 @@
 # Release Notes for Worldpay Online Payments for Craft Commerce
 
+## 4.1.0 - 2024-03-20
+- Added Craft CMS 5 and Craft Commerce 5 compatibility.
+
 ## 4.0.0 - 2022-05-04
 
 ### Added
