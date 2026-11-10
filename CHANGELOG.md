@@ -1,5 +1,18 @@
 # Release Notes for Worldpay Online Payments for Craft Commerce
 
+## Unreleased
+
+> [!WARNING]
+> This release requires Craft Commerce 6. See [UPGRADE.md](UPGRADE.md) for the breaking changes.
+
+- Worldpay for Craft Commerce now requires Craft CMS 6, Craft Commerce 6 and PHP 8.5.
+- The plugin now uses the Worldpay Online Payments JSON API directly, and no longer requires `craftcms/commerce-omnipay` or `omnipay/worldpay`.
+- Moved all classes to the `CraftCms\CommerceWorldpay` namespace. `craft\commerce\worldpay\gateways\Gateway` is kept as an alias of `CraftCms\CommerceWorldpay\Gateway`.
+- Added `CraftCms\CommerceWorldpay\Events\PaymentRequestBuilding`, which replaces the Omnipay request events.
+- The “Service key” and “Client key” gateway settings are now required.
+- Removed the “Send cart information” gateway setting.
+- Removed the install migration that converted Craft Commerce 1 Worldpay gateways.
+
 ## 4.1.0 - 2024-03-20
 - Added Craft CMS 5 and Craft Commerce 5 compatibility.
 
